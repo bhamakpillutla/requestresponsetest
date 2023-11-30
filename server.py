@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 import time
+import logging
 
 app = Flask(__name__)
 
@@ -9,7 +10,8 @@ def hello():
             'message': 'Hello, world!',
             'status': 'success'
             }
-    time.sleep(2) # Simulate a 2-second delay
+    logging.info(response)
+    # time.sleep(2) # Simulate a 2-second delay
 
     # Intentionally generate bad responses
     response['message']= 'Internal Server Error'
