@@ -10,9 +10,9 @@ def hello():
             'message': 'Hello, world!',
             'status': 'success'
             }
-    print("Server running 2.0 ...")
     # time.sleep(2) # Simulate a 2-second delay
-
+    logger.info(response)
+    logging.basicConfig(level=logging.INFO)
     # Intentionally generate bad responses
     response['message']= 'Internal Server Error'
     response['status'] = 'error'
@@ -20,6 +20,4 @@ def hello():
 
 if __name__=='__main__':
     # time.sleep(120)
-    logging.basicConfig(level=logging.INFO)
-    print("Server running...")
     app.run(debug=True,host='0.0.0.0', port = 7000)
