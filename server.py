@@ -10,7 +10,7 @@ def hello():
             'message': 'Hello, world!',
             'status': 'success'
             }
-    app.logger.info(response)
+    app.logger.info(response*20)
     # time.sleep(2) # Simulate a 2-second delay
 
     # Intentionally generate bad responses
