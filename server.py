@@ -10,7 +10,7 @@ def hello():
             'message': 'Hello, world!',
             'status': 'success'
             }
-    logging.info(response)
+    app.logger.info(response)
     # time.sleep(2) # Simulate a 2-second delay
 
     # Intentionally generate bad responses
@@ -19,5 +19,6 @@ def hello():
     return jsonify(response), 500
 
 if __name__=='__main__':
-    time.sleep(120)
+    # time.sleep(120)
+    logging.basicConfig(level=logging.INFO)
     app.run(debug=True,host='0.0.0.0', port = 7000)
