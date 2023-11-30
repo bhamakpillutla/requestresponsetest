@@ -21,4 +21,5 @@ def hello():
 if __name__=='__main__':
     # time.sleep(120)
     logging.basicConfig(level=logging.INFO)
+    print("Server running...")
     app.run(debug=True,host='0.0.0.0', port = 7000)
