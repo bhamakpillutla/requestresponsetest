@@ -11,7 +11,7 @@ def hello():
             'status': 'success'
             }
     # time.sleep(2) # Simulate a 2-second delay
-    logger.info(response)
+    app.logger.info(response)
     logging.basicConfig(level=logging.INFO)
     # Intentionally generate bad responses
     response['message']= 'Internal Server Error'
