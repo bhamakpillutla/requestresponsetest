@@ -11,7 +11,9 @@ def hello():
             'status': 'success'
             }
     # time.sleep(2) # Simulate a 2-second delay
-    app.logger.info(response)
+    app.logger.warning('A warning occurred')
+    app.logger.error('An error occurred')
+    app.logger.info('Info')
     # Intentionally generate bad responses
     response['message']= 'Internal Server Error'
     response['status'] = 'error'
@@ -19,5 +21,5 @@ def hello():
 
 if __name__=='__main__':
     # time.sleep(120)
-    logging.basicConfig(level=logging.INFO)
+    # logging.basicConfig(level=logging.INFO)
     app.run(debug=False,host='0.0.0.0', port = 7000)
