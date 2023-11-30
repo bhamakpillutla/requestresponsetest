@@ -10,7 +10,6 @@ def hello():
             'message': 'Hello, world!',
             'status': 'success'
             }
-    app.logger.info(response*20)
     print("Server running 2.0 ...")
     # time.sleep(2) # Simulate a 2-second delay
 
